@@ -1,0 +1,61 @@
+.div{
+  height: 100%;
+}
+.chatWrapper{
+  display: flex;
+  align-items: flex-start;
+}
+
+.user{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nouser{
+  & .chats{
+
+  }
+}
+.bgcBlack{
+  background-color: black;
+  color: white;
+}
+.bgcGrey{
+  background-color: #b4b0b0;
+}
+
+.chats{
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+  flex-direction: row;
+  border-radius: 20px;
+  margin: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+
+.text{
+  padding: 10px 30px;
+  border-radius: 50px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.date{
+  text-align: right;
+}
+
+
+.ava{
+  width: 70px;
+  height: 70px;
+  & img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: white;
+  }
+}

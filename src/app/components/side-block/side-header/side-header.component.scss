@@ -1,0 +1,53 @@
+.wrapperchathead{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 300px;
+  width: 100%;
+}
+.block-img{
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  position: relative;
+  margin: 20px 10px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  & .myava{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  & .online{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    fill: lawngreen;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+.search-block{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  & #search-input{
+    width: 100%;
+    max-width: 200px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    padding: 5px 0 5px 25px;
+  }
+  & label{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 5px;
+    bottom: 3px;
+  }
+}

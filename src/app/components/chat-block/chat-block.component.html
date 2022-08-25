@@ -1,0 +1,17 @@
+<div class="container" *ngIf="chat else withoutUser">
+  <div class="chat-header">
+    <app-chat-header [chat]="chat"></app-chat-header>
+  </div>
+  <div class="chat-field">
+    <app-chat-field [chat]="chat"></app-chat-field>
+  </div>
+  <div class="chat-footer">
+    <app-chat-footer
+      [messageArray]="chat.messages">
+    </app-chat-footer>
+  </div>
+</div>
+<ng-template #withoutUser>
+  <div class="blockWithoutUser">
+    <p>Hello! You need to choose chat in the sidebar!</p>
+  </div></ng-template>

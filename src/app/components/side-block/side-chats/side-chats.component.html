@@ -1,0 +1,16 @@
+<div class="chats-header">
+  <h3>Chats</h3>
+</div>
+<div class="chats-list">
+  <div class="chat" (click)="ChooseChat(chat)" *ngFor="let chat of chats">
+    <div class="avatar">
+      <img src="{{chat.userAva}}" alt="{{chat.name}}">
+    </div>
+    <div class="chat-info">
+      <div class="user-name">{{chat.name}}</div>
+      <div class="user-message">{{chat.messages[chat.messages.length-1].text | slice: 0:50}}....</div>
+    </div>
+    <div class="chat-date">{{chat.messages[chat.messages.length-1].date | date}}</div>
+    <div class="chat-read">{{chat.messages[chat.messages.length-1].read==false?'new':''}}</div>
+  </div>
+</div>

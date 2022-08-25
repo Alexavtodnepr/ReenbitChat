@@ -1,0 +1,64 @@
+
+.avatar{
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  object-fit: cover;
+  & img{
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 40px;
+    align-items: center;
+  }
+}
+
+.chats-list{
+  overflow-y: scroll;
+  height: 75vh;
+  &::-webkit-scrollbar-thumb:hover{
+    background: #555;
+  }
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+}
+.chat{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #b4b0b0;
+  cursor: pointer;
+  position: relative;
+  justify-content: space-between;
+  padding: 5px;
+  & .chat-read{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.chat-info{
+  font-size: 10px;
+  width: 150px;
+  text-align: left;
+  & .user-name{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+  }
+}
+.chat-date{
+  width: 100px;
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.chats-header{
+  font-size: 24px;
+  color: blue;
+  padding: 5px;
+}

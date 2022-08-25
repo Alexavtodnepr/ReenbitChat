@@ -1,0 +1,14 @@
+  <div class="div">
+    <ng-container class="chatWrapper user" *ngFor="let message of chat.messages; let i = index">
+      <div class="{{message.author=='user'?'user':'nouser'}}">
+        <div class="chats {{i}}"  appScrollDown>
+          <div class="ava"><img src="{{message.author=='user'?'./assets/img/icons/manager.svg':chat.userAva}}" alt=""></div>
+          <div class="wrapMessage">
+            <div class="text {{message.author=='user'?'bgcGrey':'bgcBlack'}}">{{message.text}}</div>
+            <div class="date">{{message.date | date:'short'}}</div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
