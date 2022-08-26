@@ -13,4 +13,7 @@
     <div class="chat-date">{{chat.messages[chat.messages.length-1].date | date}}</div>
     <div class="chat-read">{{chat.messages[chat.messages.length-1].read==false?'new':''}}</div>
   </div>
+  <div class="adding"><button (click)="openModal = !openModal">Add New User</button>
+    <input *ngIf="openModal" type="text" placeholder="Реалізація відбудеться після прийому на роботу))">
+  </div>
 </div>

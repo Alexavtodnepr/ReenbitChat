@@ -15,6 +15,7 @@ import { ChatFooterComponent } from './components/chat-block/chat-footer/chat-fo
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { ScrollDownDirective } from './shared/directives/scroll-down.directive';
+import { MenuDirective } from './shared/directives/menu.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ScrollDownDirective } from './shared/directives/scroll-down.directive';
     ChatHeaderComponent,
     ChatFieldComponent,
     ChatFooterComponent,
-    ScrollDownDirective
+    ScrollDownDirective,
+    MenuDirective
   ],
   imports: [
     BrowserModule,

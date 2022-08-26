@@ -10,11 +10,13 @@ import {DataService} from "../../../shared/services/data.service";
 })
 export class SideChatsComponent implements OnInit {
   chats!: any[];
-  chat = {}
+  chat = {};
+  openModal: boolean = false;
   constructor(private ds: DataService) { }
 
   ngOnInit(): void {
     this.chats = Chats;
+
   }
 
   ChooseChat(chat:any) {

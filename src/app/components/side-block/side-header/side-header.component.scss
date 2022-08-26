@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 300px;
+  max-width: 320px;
   width: 100%;
 }
 .block-img{
@@ -49,5 +49,48 @@
     position: absolute;
     left: 5px;
     bottom: 3px;
+  }
+}
+
+.shownSearch{
+  display: block;
+}
+.none{
+  display: none;
+}
+.burger{
+  display: none;
+  padding: 10px;
+}
+.close{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+@media screen and (max-width: 1326px){
+  .block-img{
+    margin: 1px;
+    width: 45px;
+    height: 45px;
+    & .myava{
+      width: 45px;
+      height: 45px;
+    }
+  }
+  //.full{
+  //  display: none;
+  //}
+  //.search-block{
+  //  margin: 0;
+  //  & label{
+  //    width: 30px;
+  //    height: 30px;
+  //    position: absolute;
+  //    left: 10px;
+  //    bottom: -30px;
+  //  }
+  //}
+  .burger{
+    display: block;
   }
 }
