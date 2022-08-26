@@ -16,6 +16,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { ScrollDownDirective } from './shared/directives/scroll-down.directive';
 import { MenuDirective } from './shared/directives/menu.directive';
+import { SearchPipe } from './shared/pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MenuDirective } from './shared/directives/menu.directive';
     ChatFieldComponent,
     ChatFooterComponent,
     ScrollDownDirective,
-    MenuDirective
+    MenuDirective,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ import {DataService} from "../../../shared/services/data.service";
 export class SideChatsComponent implements OnInit {
   chats!: any[];
   chat = {};
+  search: string = '';
   openModal: boolean = false;
   constructor(private ds: DataService) { }
 
