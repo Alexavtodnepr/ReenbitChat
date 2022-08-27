@@ -17,6 +17,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { ScrollDownDirective } from './shared/directives/scroll-down.directive';
 import { MenuDirective } from './shared/directives/menu.directive';
 import { SearchPipe } from './shared/pipes/search.pipe';
+import { FilterPipe } from './shared/pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SearchPipe } from './shared/pipes/search.pipe';
     ChatFooterComponent,
     ScrollDownDirective,
     MenuDirective,
-    SearchPipe
+    SearchPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {Chats} from "../../../../assets/static/static";
-import {ChatInterface} from "../../../shared/interfaces/chat-interface";
+import {Component, OnInit} from '@angular/core';
 import {DataService} from "../../../shared/services/data.service";
 
 @Component({
@@ -16,8 +14,7 @@ export class SideChatsComponent implements OnInit {
   constructor(private ds: DataService) { }
 
   ngOnInit(): void {
-    this.chats = Chats;
-
+    this.chats = JSON.parse(localStorage.getItem('chat')!);
   }
 
   ChooseChat(chat:any) {

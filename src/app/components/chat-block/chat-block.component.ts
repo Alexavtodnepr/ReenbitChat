@@ -16,6 +16,6 @@ export class ChatBlockComponent implements OnInit {
   ngOnInit(): void {
     this.ds.choosedChatStream$.subscribe((chat:ChatInterface)=>{
       this.chat = chat;
-    })
+    });
   }
 }

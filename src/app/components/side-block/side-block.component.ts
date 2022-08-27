@@ -17,6 +17,5 @@ export class SideBlockComponent implements OnInit {
 
   chooseChat(chat: any) {
     this.ds = chat;
-    console.log(chat);
   }
 }

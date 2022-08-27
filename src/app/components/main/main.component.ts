@@ -11,6 +11,8 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    localStorage.setItem('chat', JSON.stringify(this.chat));
+    if(localStorage.getItem('chat')==null){
+      localStorage.setItem('chat', JSON.stringify(this.chat));
+    }
   }
 }

@@ -7,6 +7,7 @@
   </div>
   <div class="chat-footer">
     <app-chat-footer
+      [id]="chat.id"
       [messageArray]="chat.messages">
     </app-chat-footer>
   </div>
@@ -14,4 +15,5 @@
 <ng-template #withoutUser>
   <div class="blockWithoutUser">
     <p>Hello! You need to choose chat in the sidebar!</p>
-  </div></ng-template>
+  </div>
+</ng-template>

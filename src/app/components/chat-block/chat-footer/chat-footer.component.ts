@@ -1,7 +1,8 @@
-import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Message} from "../../../shared/interfaces/message";
 import {ChuckNorrisService} from "../../../shared/services/chuck-norris.service";
+import {ChatInterface} from "../../../shared/interfaces/chat-interface";
 
 @Component({
   selector: 'app-chat-footer',
@@ -11,9 +12,11 @@ import {ChuckNorrisService} from "../../../shared/services/chuck-norris.service"
 export class ChatFooterComponent implements OnInit, OnChanges {
   @Input()
   messageArray!: Message[];
+  @Input()
+  id!: number;
+  storage!: ChatInterface[];
   public form!: FormGroup;
   textMessage = '';
-  joke:any = {};
 
   constructor( private jokeChuck: ChuckNorrisService) { }
 
@@ -21,8 +24,18 @@ export class ChatFooterComponent implements OnInit, OnChanges {
     this.form = new FormGroup({
       text: new FormControl('', Validators.required)
     });
+
   }
 
+  setingStorage(){
+    this.storage = JSON.parse(localStorage.getItem('chat')!);
+    this.storage.forEach(el=>{
+      if(el.id == this.id){
+        el.messages = this.messageArray;
+      }
+    });
+    localStorage.setItem('chat',JSON.stringify(this.storage));
+  }
 
   submit() {
     this.textMessage = this.form.controls['text'].value;
@@ -33,6 +46,7 @@ export class ChatFooterComponent implements OnInit, OnChanges {
       read: true
     }
     this.messageArray.push(newMessage);
+    this.setingStorage();
     this.chuckNorris()
     this.form.reset();
   }
@@ -47,6 +61,7 @@ export class ChatFooterComponent implements OnInit, OnChanges {
       }
       setTimeout(() =>{
         this.messageArray.push(newMessage);
+        this.setingStorage();
       },10000);
     });
   }
@@ -57,7 +72,8 @@ export class ChatFooterComponent implements OnInit, OnChanges {
         if(el.author == ''){
           el.read = true;
         }
-      })
+      });
+      this.setingStorage();
     },10000);
   }
 }
