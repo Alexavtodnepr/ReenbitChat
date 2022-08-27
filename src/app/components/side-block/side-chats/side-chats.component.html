@@ -6,7 +6,7 @@
   <h3>Chats</h3>
 </div>
 <div class="chats-list">
-  <div class="chat" (click)="ChooseChat(chat)" *ngFor="let chat of chats | search: search">
+  <div class="chat" (click)="ChooseChat(chat)" *ngFor="let chat of chats | search: search | filter ">
     <div class="avatar">
       <img src="{{chat.userAva}}" alt="{{chat.name}}">
     </div>
