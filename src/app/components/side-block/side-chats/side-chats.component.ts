@@ -14,9 +14,10 @@ export class SideChatsComponent implements OnInit {
   constructor(private ds: DataService) { }
 
   ngOnInit(): void {
-    this.chats = JSON.parse(localStorage.getItem('chat')!);
+    this.ds.allChatsStream$.subscribe((el)=>{
+      this.chats = el;
+    })
   }
-
   ChooseChat(chat:any) {
     this.chat = chat;
     this.ds.transData(this.chat)
