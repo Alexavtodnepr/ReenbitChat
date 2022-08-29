@@ -2,6 +2,8 @@
 
 Реалізовано за допомогою фреймворку Angular, є один баг - який необхідно пофіксити, а саме відповідь серверу йде з затримкою 10 секунд(як вказано в тз). Як вирішити це - треба створити історію дій користувача і записувати всі дію в історію. Потім порівнювати значення по id чату і пушити в масив повідомлень. Трохи з адаптивом в Css треба попрацювати, але вже як є...
 
+Посилання на ТЗ https://docs.google.com/document/d/1XfclGV7Hx9LoeC4VNmehddzljxHZE0b8/edit?usp=sharing&ouid=105693543016719000271&rtpof=true&sd=true
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
 
 ## Development server
